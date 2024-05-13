@@ -2,9 +2,23 @@
 
 #Author: Parker
 #Date Created: 4/30/24
-#Last Modified: 4/30/24
+#Last Modified: 5/13/24
 
 #Description:
 #Creates backup in ~
-tar -cvf ~/bash_course/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null
+
+
+currentdir=$(pwd)
+
+echo "Hello, ${USER^}"
+
+echo "I will now back up your home directory, $HOME"
+
+echo "You are running this script from $currentdir"
+
+echo "Therefore, I will save the backup in $currentdir"
+
+tar -cf "$currentdir/my_backup_$(date +%d-%m-%Y_%H-%M-%S).tar" $HOME/* 2>/dev/null
+
+echo "Backup Completed Successfully"
 exit 0
