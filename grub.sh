@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Author: Parker
+#Date Created: 3/28/25
+#Last Modified: 3/28/25
+
 # Mount the root partition
 mount /dev/sda2 /mnt
 
